@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //d.	Return all the prime numbers in an array
+       //Anonymous Function
+const findPrimeNumbers = function(arr) {
+    function isPrime(num) {
+        if (num <= 1) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) return false;
+        }
+        return true;
+    }
+
+    let primeNums = arr.filter((num) => isPrime(num));
+    console.log(primeNums);
+};
+
+// You can call this anonymous function with the desired array
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+findPrimeNumbers(arr); 
+
+
+
+//IIFE FUNCTION
+
+(function (arr) {
+    function isPrime(num) {
+      if (num <= 1) return false;
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+      }
+      return true;
+    }
+  
+    let primeNums = arr.filter((num) => isPrime(num));
+    console.log(primeNums);
+  })([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  
+    </script>
+</body>
+</html>

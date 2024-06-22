@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Type-1: Do the below programs in anonymous function & IIFE
+//a) Print odd numbers in an array
+
+//Anonymus Function
+
+var arr=[1,2,3,4,5,6,7,8,9,10];
+var odd=[];
+var result = function(arr){
+for(i=0;i<=arr.length;i++){
+    if(i%2 !==0){
+        odd.push(i);
+    }
+}
+
+}
+result(arr);
+console.log(odd);
+
+//IIFE Function
+
+
+(function(arr) {
+    var odd= arr.filter(arr => arr%2 !==0);
+    console.log(odd);
+})([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+
+    </script>
+</body>
+</html>
